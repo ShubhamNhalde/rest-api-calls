@@ -1,6 +1,6 @@
 package com.example.restapicalls.entity;
 
-public class user {
+public class User {
     private String firstname;
     private String lastname;
 
