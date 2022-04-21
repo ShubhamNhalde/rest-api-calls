@@ -1,9 +1,6 @@
 package com.example.restapicalls.controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/hello")
@@ -20,5 +17,10 @@ public class HelloWorldController {
         return "Hello" + " " + name + " " + "From Bridgelabz";
     }
 
+    //UC3
+    @GetMapping(value = {"/param/{name}"})
+    public String sayhelloParam(@PathVariable String name) {
+        return "Hello" + " " + name + " " + "From Bridgelabz";
+    }
 
 }
