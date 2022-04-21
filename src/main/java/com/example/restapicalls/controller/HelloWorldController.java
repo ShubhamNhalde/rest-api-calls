@@ -14,5 +14,11 @@ public class HelloWorldController {
         return "Hello from Bridgelabz";
     }
 
+    //UC2
+    @RequestMapping(value = {"/query"}, method = RequestMethod.GET)
+    public String sayHello(@RequestParam(value = "name") String name) {
+        return "Hello" + " " + name + " " + "From Bridgelabz";
+    }
+
 
 }
