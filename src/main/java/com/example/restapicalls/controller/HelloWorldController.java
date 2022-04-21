@@ -1,5 +1,6 @@
 package com.example.restapicalls.controller;
 
+import com.example.restapicalls.entity.user;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -22,5 +23,12 @@ public class HelloWorldController {
     public String sayhelloParam(@PathVariable String name) {
         return "Hello" + " " + name + " " + "From Bridgelabz";
     }
+
+    //UC4
+    @PostMapping("/post")
+    public String sayHelloPost(@RequestBody user user) {
+        return "Hello" + user.getFirstname() + " " + user.getLastname();
+    }
+
 
 }
